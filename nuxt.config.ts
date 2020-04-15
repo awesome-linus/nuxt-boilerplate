@@ -47,7 +47,7 @@ const nuxtConfig: Configuration = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['nuxt-device-detect'],
   /*
    ** Build configuration
    */
