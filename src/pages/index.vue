@@ -10,6 +10,11 @@
         error_handling
       </nuxt-link>
     </li>
+    <li>
+      <nuxt-link to="/agent">
+        agent
+      </nuxt-link>
+    </li>
   </ul>
 </template>
 
