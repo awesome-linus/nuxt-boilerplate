@@ -1,8 +1,14 @@
 .container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  min-height: 100vh;
+  margin-top: 10%;
   text-align: center;
+}
+
+.selectBox {
+  select {
+    background-color: lightcyan;
+  }
+}
+
+.selectedBox {
+  font-size: 25px;
 }
