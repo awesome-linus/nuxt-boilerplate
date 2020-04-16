@@ -20,6 +20,11 @@
         agent
       </nuxt-link>
     </li>
+    <li>
+      <nuxt-link to="/query_params">
+        query_params
+      </nuxt-link>
+    </li>
   </ul>
 </template>
 
