@@ -6,8 +6,8 @@
       </nuxt-link>
     </li>
     <li>
-      <nuxt-link to="/errorHandling">
-        errorHandling
+      <nuxt-link to="/error_handling">
+        error_handling
       </nuxt-link>
     </li>
   </ul>
