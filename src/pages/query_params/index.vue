@@ -5,17 +5,17 @@
         <option value="" hidden>
           選択してください
         </option>
-        <option value="query1">
-          query1
+        <option value="queryParameter1">
+          queryParameter1
         </option>
-        <option value="query2">
-          query2
+        <option value="queryParameter2">
+          queryParameter2
         </option>
-        <option value="query3">
-          query3
+        <option value="queryParameter3">
+          queryParameter3
         </option>
-        <option value="query4">
-          query4
+        <option value="queryParameter4">
+          queryParameter4
         </option>
       </select>
     </div>
