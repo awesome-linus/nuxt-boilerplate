@@ -1,16 +1,5 @@
 <template>
   <div>
-    <div>
-      <div v-if="$device.isDesktop">
-        Desktop
-      </div>
-      <div v-else-if="$device.isTablet">
-        Tablet
-      </div>
-      <div v-else>
-        Mobile
-      </div>
-    </div>
     <div :class="$style.container">
       <div>
         <CurrentCount :count="currentCount().count" />

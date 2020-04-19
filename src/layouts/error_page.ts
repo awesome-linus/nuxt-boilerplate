@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import ErrorPc from '~/components/pc/error';
-import ErrorSp from '~/components/sp/error';
+import ErrorPc from '~/components/desktop/error';
+import ErrorSp from '~/components/desktop/error';
 
 export default Vue.extend({
   components: {
@@ -14,9 +14,11 @@ export default Vue.extend({
     }
   },
   head() {
-    // const href: string = this.$store.app.$device.isDesktop? '/css/error_pc.css':'/css/error_sp.css';
+    const href: string = this.$store.app.$device.isDesktop
+      ? '/css/error_pc.css'
+      : '/css/error_sp.css';
     return {
-      // link: [{ rel: 'stylesheet', href }]
+      link: [{ rel: 'stylesheet', href }]
     };
   }
 });
