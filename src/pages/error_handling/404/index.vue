@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to:="/" />
+  <dir>Not Display</dir>
 </template>
 
 <script lang="ts" src="./index.ts" />

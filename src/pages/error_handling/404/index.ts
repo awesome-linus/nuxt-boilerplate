@@ -6,7 +6,7 @@ import retrieveErrorStatus from '~/error/retrieveErrorStatus';
 export default Vue.extend({
   async fetch({ store, error }: Context) {
     await store
-      .dispatch('errorHandling/occurError')
+      .dispatch('errorHandling/throw404Error')
       .catch((axiosError: AxiosError) => {
         error({ statusCode: retrieveErrorStatus(axiosError) });
       });
