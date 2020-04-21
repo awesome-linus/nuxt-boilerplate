@@ -1,9 +1,14 @@
 import Vue from 'vue';
 import { Context } from '@nuxt/types';
+import { AxiosError } from 'axios';
+import retrieveErrorStatus from '~/error/retrieveErrorStatus';
 
 export default Vue.extend({
-  async fetch({ error }: Context) {
-    console.error('Test Error Occured: 404');
-    await error({ statusCode: 404 });
+  async fetch({ store, error }: Context) {
+    await store
+      .dispatch('errorHandling/occurError')
+      .catch((axiosError: AxiosError) => {
+        error({ statusCode: retrieveErrorStatus(axiosError) });
+      });
   }
 });
