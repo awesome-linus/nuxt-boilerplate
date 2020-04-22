@@ -7,12 +7,12 @@ const router = Router();
 const bff = express();
 
 // Maintenance Mode
-bff.use((req, res, next) => {
-  if (req.url === '/api/healthcheck') {
-    return next();
-  }
-  return res.redirect('/errors/503.html');
-});
+// bff.use((req, res, next) => {
+//   if (req.url === '/api/healthcheck') {
+//     return next();
+//   }
+//   return res.redirect('/errors/503.html');
+// });
 
 bff.use('/api', router);
 
