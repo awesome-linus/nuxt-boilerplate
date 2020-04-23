@@ -1,6 +1,9 @@
 # nuxt-typescript-sample
 
-> My cat&#39;s pajamas Nuxt.js project
+## Node
+```
+v12.8.1
+```
 
 ## Build Setup
 
