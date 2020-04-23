@@ -6,7 +6,7 @@ const nuxtConfig: Configuration = {
   env: {
     appUrl: process.env.APP_URL || 'http://localhost:8106'
   },
-  serverMiddleware: ['./src/server/bff'],
+  serverMiddleware: ['~~/server/bff.ts'],
   /*
    ** Headers of the page
    */
@@ -62,9 +62,22 @@ const nuxtConfig: Configuration = {
         }
       }
     },
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    extend(config, ctx) {}
+    extend(config: any, ctx: any) {
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map';
+      }
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        });
+      }
+      const path = require('path');
+      config.resolve.alias['~~/'] = path.join(__dirname, './*');
+    }
   }
 };
 
