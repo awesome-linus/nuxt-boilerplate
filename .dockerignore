@@ -1,0 +1,9 @@
+.git
+.nuxt
+node_modules
+test
+.envrc
+.gitignore
+.prettierrc
+jest.config.js
+README.md

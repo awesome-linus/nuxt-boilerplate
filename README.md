@@ -5,6 +5,14 @@
 v12.8.1
 ```
 
+# 本番
+ローカル環境で動作確認する際には以下のコマンドで確認
+```
+docker build --rm --no-cache -t nuxt-boilerplate -f docker/Dockerfile .
+
+docker run -it -p 3000:3000 nuxt-boilerplate
+```
+
 ## Build Setup
 
 ``` bash
