@@ -4,7 +4,7 @@ const nuxtConfig: Configuration = {
   mode: 'universal',
   srcDir: 'src',
   env: {
-    appUrl: process.env.APP_URL || 'http://localhost:8106'
+    appUrl: process.env.APP_URL || 'http://localhost:3000'
   },
   serverMiddleware: ['~~/server/bff.ts'],
   /*

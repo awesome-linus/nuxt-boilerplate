@@ -5,7 +5,7 @@
   "author": "“takaaki-kadokura”",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .nuxt && rm -rf dist && PORT=8106 cross-env NODE_ENV=development nuxt-ts",
+    "dev": "rm -rf .nuxt && rm -rf dist && PORT=3000 cross-env NODE_ENV=development nuxt-ts",
     "build": "rm -rf .nuxt && rm -rf dist && nuxt-ts build",
     "start": "cross-env NODE_ENV=production nuxt-ts start",
     "generate": "rm -rf .nuxt && rm -rf dist && nuxt-ts generate",
