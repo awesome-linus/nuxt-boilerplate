@@ -5,7 +5,7 @@
   "author": "“takaaki-kadokura”",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .nuxt && rm -rf dist && PORT=3000 STAGE=local cross-env NODE_ENV=development nuxt-ts",
+    "dev": "rm -rf .nuxt && rm -rf dist && PORT=3000 STAGE=local cross-env NODE_ENV=development nodemon",
     "build:local": "rm -rf .nuxt && rm -rf dist && STAGE=local cross-env NODE_ENV=development nuxt-ts build",
     "build:staging": "rm -rf .nuxt && rm -rf dist && STAGE=staging cross-env NODE_ENV=development nuxt-ts build",
     "build:production": "rm -rf .nuxt && rm -rf dist && STAGE=production cross-env NODE_ENV=production nuxt-ts build",
