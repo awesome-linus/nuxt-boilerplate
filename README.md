@@ -23,7 +23,13 @@ docker run -it -p 3000:3000 nuxt-boilerplate
 # 本番ビルド
 ローカル環境で動作確認する際には以下のコマンドで確認
 ```
-docker build --rm --no-cache -t nuxt-boilerplate -f docker/production/Dockerfile .
+$ docker build \
+--rm \
+--no-cache \
+--build-arg ANY_SECRET_KEY=${ANY_SECRET_KEY} \
+--build-arg ANY_SECRET_KEY_SECOND=${ANY_SECRET_KEY_SECOND} \
+-t nuxt-boilerplate \
+-f docker/production/Dockerfile .
 
 docker run -it -p 3000:3000 nuxt-boilerplate
 ```

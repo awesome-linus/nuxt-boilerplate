@@ -8,7 +8,6 @@ export const httpClient = axios.create({
 
 interface ErrorHandlingApi {
   throw404Error: Function;
-  return503Maintenance: Function;
 }
 
 const ErrorHandlingApi = (): ErrorHandlingApi => {
@@ -19,14 +18,7 @@ const ErrorHandlingApi = (): ErrorHandlingApi => {
         return Promise.resolve(axiosResponse.data);
       });
   };
-  const return503Maintenance = (): Promise<ErrorType> => {
-    return httpClient
-      .get<ErrorType>('/maintenance')
-      .then((axiosResponse: AxiosResponse) => {
-        return Promise.resolve(axiosResponse.data);
-      });
-  };
-  return { throw404Error, return503Maintenance };
+  return { throw404Error };
 };
 
 export default ErrorHandlingApi;

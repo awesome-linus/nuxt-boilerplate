@@ -15,7 +15,6 @@ export const getters: GetterTree<State, RootState> = {};
 
 export interface Actions<S, R> extends ActionTree<S, R> {
   throw404Error(context: ActionContext<S, R>): Promise<void>;
-  return503Maintenance(context: ActionContext<S, R>): Promise<void>;
 }
 
 export const actions: Actions<State, RootState> = {
@@ -25,9 +24,6 @@ export const actions: Actions<State, RootState> = {
     if (response.message === 'Throw 404 Error') {
       throw new Throwable404Error();
     }
-  },
-  return503Maintenance: async () => {
-    await errorHandlingApi.return503Maintenance();
   }
 };
 

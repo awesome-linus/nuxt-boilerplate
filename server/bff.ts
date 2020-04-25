@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import bffSamples from './router/api/bffSamples';
+import counter from './router/api/counter';
 import errorHandling from './router/api/errorHandling';
 import healthcheck from './router/api/healthcheck';
 import envCheck from './router/api/envCheck';
@@ -20,7 +20,7 @@ const bff = express();
 
 bff.use('/api', router);
 
-router.use(bffSamples);
+router.use(counter);
 router.use(errorHandling);
 router.use(healthcheck);
 router.use(envCheck);
