@@ -1,8 +1,6 @@
 import { Configuration } from '@nuxt/types';
 import env from './config';
 
-console.log(env);
-
 const nuxtConfig: Configuration = {
   mode: 'universal',
   srcDir: 'src',
