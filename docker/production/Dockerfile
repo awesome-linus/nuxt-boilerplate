@@ -13,7 +13,7 @@ RUN yarn install
 COPY --chown=node:node . .
 
 # build
-RUN yarn build
+RUN yarn build:production
 
 FROM node:12.16.0-alpine
 
@@ -33,4 +33,4 @@ COPY --from=builder --chown=node:node /home/node/tsconfig.json ./tsconfig.json
 
 ENV HOST=0.0.0.0
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["yarn", "start:production"]

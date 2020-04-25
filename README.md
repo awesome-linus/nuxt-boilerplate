@@ -5,10 +5,18 @@
 v12.8.1
 ```
 
-# 本番
+## Docker
+# 開発ビルド
 ローカル環境で動作確認する際には以下のコマンドで確認
 ```
-docker build --rm --no-cache -t nuxt-boilerplate -f docker/Dockerfile .
+docker build --rm --no-cache -t nuxt-boilerplate -f docker/development/Dockerfile .
+
+docker run -it -p 3000:3000 nuxt-boilerplate
+```
+# 本番ビルド
+ローカル環境で動作確認する際には以下のコマンドで確認
+```
+docker build --rm --no-cache -t nuxt-boilerplate -f docker/production/Dockerfile .
 
 docker run -it -p 3000:3000 nuxt-boilerplate
 ```

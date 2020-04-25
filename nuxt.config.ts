@@ -1,11 +1,10 @@
 import { Configuration } from '@nuxt/types';
+import env from '~~/config';
 
 const nuxtConfig: Configuration = {
   mode: 'universal',
   srcDir: 'src',
-  env: {
-    appUrl: process.env.APP_URL || 'http://localhost:3000'
-  },
+  env,
   serverMiddleware: ['~~/server/bff.ts'],
   /*
    ** Headers of the page
