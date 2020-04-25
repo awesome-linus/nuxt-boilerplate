@@ -1,5 +1,5 @@
 import { Configuration } from '@nuxt/types';
-import env from '~~/config';
+import env from './config';
 
 const nuxtConfig: Configuration = {
   mode: 'universal',

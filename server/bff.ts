@@ -1,4 +1,5 @@
 import express, { Router } from 'express';
+import env from './config';
 import bffSamples from './router/api/bffSamples';
 import errorHandling from './router/api/errorHandling';
 import healthcheck from './router/api/healthcheck';
@@ -13,6 +14,10 @@ const bff = express();
 //   }
 //   return res.redirect('/errors/503.html');
 // });
+
+// Use Secret Key For Server Side
+// You Can Get Secret Key Only Server Side
+console.log(env.anySecretKey);
 
 bff.use('/api', router);
 

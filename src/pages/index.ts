@@ -34,5 +34,13 @@ export default Vue.extend({
         }
       ]
     };
+  },
+  created() {
+    // Environment Variables check
+    // For Client Side
+    console.log(process.env.appUrl);
+
+    // You Can Not Get Secret Key In Clinet Side
+    console.log(process.env.anySecretKey);
   }
 });
