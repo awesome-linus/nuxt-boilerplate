@@ -15,7 +15,7 @@ router.get(
 );
 
 /**
- * http://localhost:3000/api/env/anySecretKey
+ * http://localhost:3000/api/env/anySecretKeySecond
  */
 router.get(
   '/env/anySecretKeySecond',
