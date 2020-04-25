@@ -15,8 +15,9 @@ const bff = express();
 //   return res.redirect('/errors/503.html');
 // });
 
-// Use Secret Key For Server Side
-// You Can Get Secret Key Only Server Side
+// Use Secret Key For Server Side(BFF)
+// You Can Get Secret Key Only Server Side(BFF)
+console.log('Environment Variables For Server Side(BFF)');
 console.log(env.anySecretKey);
 
 bff.use('/api', router);

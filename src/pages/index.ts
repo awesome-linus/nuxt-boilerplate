@@ -1,6 +1,16 @@
 import Vue from 'vue';
 
 export default Vue.extend({
+  fetch() {
+    // Environment Variables check
+    // For Client Side(Nuxt)
+    console.log('Environment Variables For Client Side');
+    console.log(process.env.appUrl);
+
+    // You Can Not Get Secret Key In Clinet Side(Nuxt)
+    console.log('Environment Variables For Server Side(BFF)');
+    console.log(process.env.anySecretKey);
+  },
   data: () => {
     return {
       pages: [
@@ -34,13 +44,5 @@ export default Vue.extend({
         }
       ]
     };
-  },
-  created() {
-    // Environment Variables check
-    // For Client Side
-    console.log(process.env.appUrl);
-
-    // You Can Not Get Secret Key In Clinet Side
-    console.log(process.env.anySecretKey);
   }
 });
