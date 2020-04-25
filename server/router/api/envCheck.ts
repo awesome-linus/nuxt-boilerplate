@@ -15,13 +15,13 @@ router.get(
 );
 
 /**
- * http://localhost:3000/api/env/anySecretKeySecond
+ * http://localhost:3000/api/env/commonKey
  */
 router.get(
-  '/env/anySecretKeySecond',
+  '/env/commonKey',
   (_req: Request, _res: Response, _next: NextFunction) => {
     // Environment Variables For Server Side(BFF)
-    return _res.status(200).send(env.anySecretKeySecond);
+    return _res.status(200).send(env.commonKey);
   }
 );
 
