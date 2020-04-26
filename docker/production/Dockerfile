@@ -37,6 +37,7 @@ COPY --chown=node:node package.json nuxt.config.ts ./
 
 # Copy from builder
 COPY --from=builder --chown=node:node /home/node/server ./server
+COPY --from=builder --chown=node:node /home/node/config ./config
 COPY --from=builder --chown=node:node /home/node/src/domain ./src/domain
 COPY --from=builder --chown=node:node /home/node/node_modules ./node_modules
 COPY --from=builder --chown=node:node /home/node/.nuxt ./.nuxt

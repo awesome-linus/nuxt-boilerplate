@@ -32,6 +32,9 @@ $ docker build \
 -f docker/production/Dockerfile .
 
 docker run -it -p 3000:3000 nuxt-boilerplate
+
+# バックグラウンド実行
+$ docker run -itd -p 3000:3000 nuxt-boilerplate
 ```
 
 ## Build Setup
