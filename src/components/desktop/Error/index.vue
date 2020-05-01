@@ -1,8 +1,8 @@
 <template>
   <div>
     Desktop
-    <Error404 v-if="error.statusCode === 404" :error="error" />
-    <Error503 v-if="error.statusCode === 503" :error="error" />
+    <Error401 v-if="error.statusCode === 401" :error="error" />
+    <Error404 v-else-if="error.statusCode === 404" :error="error" />
     <Error500 v-else :error="error" />
   </div>
 </template>

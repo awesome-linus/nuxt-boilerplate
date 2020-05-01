@@ -19,7 +19,11 @@ export default Vue.extend({
           path: '/counter'
         },
         {
-          name: '404 Error',
+          name: '401 Error(Unauthorized)',
+          path: '/error_handling/401'
+        },
+        {
+          name: '404 Error(Not Found)',
           path: '/error_handling/404'
         },
         {

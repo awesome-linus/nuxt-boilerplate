@@ -6,19 +6,23 @@ export const httpClient = axios.create({
   timeout: 5000
 });
 
-interface ErrorHandlingApi {
-  throw404Error: Function;
-}
-
-const ErrorHandlingApi = (): ErrorHandlingApi => {
-  const throw404Error = (): Promise<ErrorType> => {
-    return httpClient
-      .get<ErrorType>('/throw404Error')
-      .then((axiosResponse: AxiosResponse) => {
-        return Promise.resolve(axiosResponse.data);
-      });
-  };
-  return { throw404Error };
+const throw401Error = (): Promise<ErrorType> => {
+  return httpClient
+    .get<ErrorType>('/throw401Error')
+    .then((axiosResponse: AxiosResponse) => {
+      return Promise.resolve(axiosResponse.data);
+    });
 };
 
-export default ErrorHandlingApi;
+const throw404Error = (): Promise<ErrorType> => {
+  return httpClient
+    .get<ErrorType>('/throw404Error')
+    .then((axiosResponse: AxiosResponse) => {
+      return Promise.resolve(axiosResponse.data);
+    });
+};
+
+export default {
+  throw401Error,
+  throw404Error
+};

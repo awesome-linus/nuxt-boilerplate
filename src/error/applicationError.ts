@@ -1,3 +1,4 @@
 import ExtensibleCustomError from '~/error/extensibleCustomError';
 
-export class Throwable404Error extends ExtensibleCustomError {}
+export class Unauthorized extends ExtensibleCustomError {}
+export class NotFound extends ExtensibleCustomError {}

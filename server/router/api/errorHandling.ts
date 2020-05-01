@@ -3,6 +3,16 @@ import { Router, Request, Response, NextFunction } from 'express';
 const router = Router();
 
 /**
+ * http://localhost:3000/api/throw401Error
+ */
+router.get(
+  '/throw401Error',
+  (_req: Request, _res: Response, _next: NextFunction) => {
+    return _res.status(200).json({ message: 'Throw 401 Error' });
+  }
+);
+
+/**
  * http://localhost:3000/api/throw404Error
  */
 router.get(

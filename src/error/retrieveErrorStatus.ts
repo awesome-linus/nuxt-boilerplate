@@ -1,8 +1,9 @@
 import { AxiosError } from 'axios';
-import { Throwable404Error } from '~/error/applicationError';
+import { Unauthorized, NotFound } from '~/error/applicationError';
 
 const retrieveErrorStatus = (error: AxiosError) => {
-  if (error instanceof Throwable404Error) return 404;
+  if (error instanceof Unauthorized) return 401;
+  if (error instanceof NotFound) return 404;
   return 500;
 };
 
