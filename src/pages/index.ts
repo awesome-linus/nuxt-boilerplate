@@ -48,5 +48,6 @@ export default Vue.extend({
         }
       ]
     };
-  }
+  },
+  layout: ({ app: { $device } }) => ($device.isDesktop ? 'desktop' : 'mobile')
 });
