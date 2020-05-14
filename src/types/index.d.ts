@@ -12,6 +12,7 @@ interface NuxtContext {
   isHMR: boolean;
   route: Route;
   store: Store<any>;
+  $extendStore: Store<any>;
   env: object;
   query: object;
   nuxtState: object;
