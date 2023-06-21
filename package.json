@@ -29,7 +29,7 @@
     "@storybook/addon-viewport": "^5.3.17",
     "core-js": "2.6.9",
     "cross-env": "^7.0.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "nuxt-device-detect": "^1.1.5",
     "storybook-addon-vue-info": "^1.4.2"
   },
